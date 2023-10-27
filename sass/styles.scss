@@ -62,5 +62,12 @@ footer {
   color: #fff;
 }
 
+.accordion-header {
+  button:hover {
+    background-color: #274060;
+    color: #fff;
+  }
+}
+
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/variables";
