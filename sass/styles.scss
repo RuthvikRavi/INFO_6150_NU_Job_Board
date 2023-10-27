@@ -1,4 +1,17 @@
-$spacer: 1rem;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-padding-y: 0.5em;
+$navbar-padding-x: 1em;
+
+$display-font-sizes: (
+  1: 8rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+);
+
+$spacer: 2rem;
 $spacers: (
   0: 0,
   1: $spacer * 0.25,
@@ -44,6 +57,9 @@ h1 span {
 }
 
 .testimonial {
-  background: linear-gradient(#1e3b70, #29539b);
+  background: linear-gradient(#274060, #1b2845);
   color: #fff;
 }
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
