@@ -16,9 +16,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.content .client-img {
-  min-width: 400px;
-}
 
 .object-fit-cover {
   width: 200px;
@@ -35,6 +32,11 @@ h1 span, .h1 span {
 }
 
 .testimonial {
+  background: linear-gradient(#274060, #1b2845);
+  color: #fff;
+}
+
+footer {
   background: linear-gradient(#274060, #1b2845);
   color: #fff;
 }
