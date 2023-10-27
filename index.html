@@ -11,11 +11,115 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="sass/styles.scss" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Sample text</h1>
+      <div class="d-flex flex-row flex-wrap align-items-center justify-content-between mt-5">
+        <img class="client-icon" src="/assets/images/android.png" alt="Android" />
+        <img class="client-icon" src="/assets/images/fitbit.png" alt="Fitbit" />
+        <img class="client-icon" src="/assets/images/flutter.png" alt="Flutter" />
+        <img class="client-icon" src="/assets/images/google.png" alt="Google" />
+        <img class="client-icon" src="/assets/images/tensorflow.png" alt="TensorFlow" />
+      </div>
+      <div class="content d-flex flex-row flex-wrap justify-content-center">
+        <div class="w-50">
+          <h1 class="display-3">
+            <span class="highlight">One</span> platform <br />
+            <span class="highlight">Multiple</span> opportunities
+          </h1>
+          <p>
+            Explore our platform for outstanding job opportunities with top-tier clients. Your dream
+            job is just a click away. Join us today!
+          </p>
+          <button type="button" class="btn btn-dark">Create Profile</button>
+        </div>
+        <img
+          width="40%"
+          class="img-fluid ml-5 mt-5 client-img"
+          src="./assets/images/clients.jpg"
+          alt="Clients image"
+        />
+      </div>
+    </div>
+    <h1 class="text-center display-3 my-5">
+      Hired with
+      <span class="highlight"> NU Jobs </span>
+    </h1>
+    <div class="container testimonial my-5 pt-5">
+      <div id="carouselExample" class="carousel slide my-5" style="height: 300px">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex flex-wrap flex-row align-items-center justify-content-evenly">
+              <img
+                src="/assets/images/headshot1.jpg"
+                alt=""
+                class="rounded-circle object-fit-cover"
+              />
+              <div class="d-flex flex-column">
+                <h3 class="fw-bold">John Doe</h3>
+                <p class="fw-light">Northeastern University</p>
+                <p class="text-wrap fw-medium" style="width: 20rem">
+                  "This platform made job hunting easier. User-friendly interface, personalized
+                  recommendations, and timely notifications. Landed my dream job within weeks!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-wrap flex-row align-items-center justify-content-evenly">
+              <img
+                src="/assets/images/headshot2.jpg"
+                alt=""
+                class="rounded-circle object-fit-cover"
+              />
+              <div class="d-flex flex-column">
+                <h3 class="fw-bold">James M</h3>
+                <p class="fw-light">Northeastern University</p>
+                <p class="text-wrap fw-medium" style="width: 20rem">
+                  "Impressive job listings, real-time alerts. Supportive community and insightful
+                  content. Switched industries and found my dream job."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-wrap flex-row align-items-center justify-content-evenly">
+              <img
+                src="/assets/images/headshot3.jpg"
+                alt=""
+                class="rounded-circle object-fit-cover"
+              />
+              <div class="d-flex flex-column">
+                <h3 class="fw-bold">Sarah jane</h3>
+                <p class="fw-light">Northeastern University</p>
+                <p class="text-wrap fw-medium" style="width: 20rem">
+                  "Simplified my job search. Advanced search, company insights, easy application
+                  tracking. Landed a fantastic entry-level position. Highly recommend!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
