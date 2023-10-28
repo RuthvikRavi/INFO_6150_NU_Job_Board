@@ -17,6 +17,8 @@ window.onload = () => {
 const loginEmailInput = document.getElementById("login-email");
 const signupEmailInput = document.getElementById("signup-email");
 var emailValidated = false;
+const signupLnameInput = document.getElementById("signup-lname");
+var lnameValidated = false;
 
 //Functions
 function validateEmailLogin(email, helpId, checkboxId, buttonId) {
@@ -136,6 +138,33 @@ function validatePasswordMatch(
   enableCheckboxSignup(emailValidated, passwordValidated, passwordMatched, fnameValidated, lnameValidated, checkbox);
   enableButton(buttonId, checkbox);
 }
+
+function validateLnameSignup(lname, helpId, checkboxId, buttonId) {
+  const lnameRegex = /^[A-Za-z]{1,10}$/;
+  const lnameHelp = document.getElementById(helpId);
+  const checkbox = document.getElementById(checkboxId);
+
+  if (!lnameRegex.test(lname)) {
+    lnameHelp.textContent = "Invalid last name. Please avoid any spaces and symbols.";
+    lnameValidated = false;
+  } else {
+    lnameHelp.textContent = "";
+    lnameValidated = true;
+  }
+
+  enableCheckboxSignup(emailValidated, passwordValidated, passwordMatched, fnameValidated, lnameValidated, checkbox);
+  enableButton(buttonId, checkbox);
+}
+
+
+signupLnameInput.addEventListener("input", function () {
+  validateLnameSignup(
+    signupLnameInput.value,
+    "signup-lname-help",
+    "signup-terms-conditions",
+    "signup-form-button"
+  );
+});
 
 loginPasswordInput.addEventListener("input", function () {
   validatePasswordLogin(
