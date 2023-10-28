@@ -72,5 +72,21 @@ footer {
   }
 }
 
+.btn-rounded {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 15px 15px;
+}
+
+.form-check-label{
+  padding-bottom: 1em;
+}
+
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/variables";
