@@ -19,4 +19,4 @@ The following bootstrap components have been used
 13. Placeholders
 14. Spinner
 15. Tooltip
-16. dropdown
+16. Dropdown
