@@ -158,6 +158,7 @@ function enableCheckboxLogin(emailValidated, passwordValidated, checkbox){
       checkbox.disabled = false;
   }else{
       checkbox.disabled = true;
+      checkbox.checked = false;
   }
 }
 
