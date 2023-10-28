@@ -48,12 +48,31 @@
             <li class="nav-item px-2">
               <a class="nav-link" href="#">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Resources</a>
+            <li>
+              <div class="btn-group">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="text-center" style="padding: 10px; text-align: justify">
+                    Resume generation
+                  </li>
+                  <li class="text-center" style="padding: 10px; text-align: justify">
+                    CV generation
+                  </li>
+                  <li class="text-center" style="padding: 10px; text-align: justify">
+                    Interview preparation
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <!-- Removing unnecessary header login and signup buttons  -->
             <!-- <button class="btn btn-dark mx-3" type="submit">Log in</button>
             <button class="btn btn-outline-dark" type="submit">Sign up</button> -->
           </form>
@@ -114,7 +133,17 @@
         <div class="col">
           <h4>Resources</h4>
           <p>Privacy Policy</p>
-          <p>Terms and Conditions</p>
+          <button
+            class="btn"
+            style="color: white; margin-top: -10px; margin-bottom: 5px"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            T & C
+          </button>
+          <p>Contact Us</p>
         </div>
       </div>
       <p class="text-center mt-2">&copy 2023 NU-Jobs All rights reserved</p>
@@ -131,22 +160,5 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <style>
-      .btn-rounded {
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 50px;
-      }
-
-      .tab-content {
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 0 0 15px 15px;
-      }
-
-      .form-check-label {
-        padding-bottom: 1em;
-      }
-    </style>
   </body>
 </html>
