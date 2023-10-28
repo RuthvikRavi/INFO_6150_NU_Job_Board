@@ -166,6 +166,7 @@ function enableCheckboxSignup(emailValidated, passwordValidated, passwordMatched
       checkbox.disabled = false;
   }else{
       checkbox.disabled = true;
+      checkbox.checked = false;
   }
 }
 
