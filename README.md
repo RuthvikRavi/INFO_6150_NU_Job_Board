@@ -2,13 +2,13 @@
 
 ### Team Members
 
-`Ruthvik Bangalore Ravi `
+`Ruthvik Bangalore Ravi - 002294710`
 
-`Neha Balaji `
+`Neha Balaji - 002295604`
 
-`Aditya Sawant`
+`Aditya Sawant - 002762104`
 
-`Ameya Apte`
+`Ameya Apte - 002764540`
 
 ##
 
@@ -34,5 +34,6 @@ The following bootstrap components have been used
 14. Spinner
 15. Tooltip
 16. Dropdown
+17. Form Group
 
 ##
