@@ -90,21 +90,153 @@
               class="img-fluid w-75 mx-auto d-block rounded"
             />
           </div>
+          <div class="col-md-6 mt-sm-2 mt-2 mb-3">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                    <li
+                      class="nav-item col-6 text-center display-8 pl-0 pr-0 fw-medium"
+                    >
+                      <a
+                        class="nav-link active"
+                        id="login-tab"
+                        data-toggle="tab"
+                        href="#login"
+                        role="tab"
+                        aria-controls="login"
+                        aria-selected="true"
+                        >Login</a
+                      >
+                    </li>
+                    <li
+                      class="nav-item col-6 text-center display-8 pl-0 pr-0 fw-medium"
+                    >
+                      <a
+                        class="nav-link"
+                        id="signup-tab"
+                        data-toggle="tab"
+                        href="#signup"
+                        role="tab"
+                        aria-controls="signup"
+                        aria-selected="false"
+                        >Sign Up</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabsContent">
+                    <!-- Login Form -->
+                    <div
+                      class="tab-pane fade show active"
+                      id="login"
+                      role="tabpanel"
+                      aria-labelledby="login-tab"
+                    >
+                      <form id="login-form">
+                        <div class="form-group">
+                          <label for="login-email" class="fw-medium"
+                            >Email ID</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="login-email"
+                            placeholder="Enter your email"
+                            required
+                          />
+                          <small
+                            id="login-email-help"
+                            class="form-text text-danger"
+                          ></small>
+                        </div>
+                        <div class="form-group">
+                          <label for="login-password" class="fw-medium"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="login-password"
+                            placeholder="Enter your password"
+                            required
+                          />
+                          <small
+                            id="login-password-help"
+                            class="form-text text-danger"
+                          ></small>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="login-terms-conditions"
+                            disabled
+                          />
+                          <label
+                            class="form-check-label"
+                            for="login-terms-conditions"
+                            >I agree to the
+                            <a
+                              href="#"
+                              data-toggle="modal"
+                              data-target="#termsModal"
+                              >Terms and Conditions</a
+                            ></label
+                          >
+                        </div>
+                        <span
+                          class="d-block"
+                          tabindex="0"
+                          data-toggle="tooltip"
+                          title="Please fill in all fields"
+                        >
+                          <button
+                            type="submit"
+                            class="btn btn-primary btn-block btn-dark"
+                            id="login-form-button"
+                            disabled
+                          >
+                            Login
+                          </button>
+                        </span>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="termsModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="termsModalLabel"
+        aria-hidden="true"
+      >
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>These are the terms and conditions of using our service. Please read them carefully.</p>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="termsModalLabel">
+                Terms and Conditions
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <p>
+                These are the terms and conditions of using our service. Please
+                read them carefully.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

@@ -2,7 +2,7 @@
 
 An online platform connecting job seekers and employers called NU Jobs, makes job hunting and hiring efficient and effective.
 
-The following bootstrap components have been used
+The following bootstrap components have been used-
 
 1. Accordion
 2. Alert
