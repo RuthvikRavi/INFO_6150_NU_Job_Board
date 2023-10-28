@@ -19,6 +19,7 @@ const signupEmailInput = document.getElementById("signup-email");
 var emailValidated = false;
 const signupLnameInput = document.getElementById("signup-lname");
 var lnameValidated = false;
+const submitSignup = document.getElementById("signup-form-button");
 
 //Functions
 function validateEmailLogin(email, helpId, checkboxId, buttonId) {
@@ -205,3 +206,15 @@ confirmPasswordInput.addEventListener("input", function () {
   );
   confirmPasswordTyped = true;
 });
+
+submitSignup.addEventListener("click", function () {
+  addSpinner("signup-form-button");
+});
+
+function addSpinner(buttonId){
+  const button = document.querySelector(`#${buttonId}`);
+  var textBtn = button.innerHTML;
+  button.innerHTML = `<div class="spinner-border" role="status">
+  </div>`;
+}
+
