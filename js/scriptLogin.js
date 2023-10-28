@@ -278,5 +278,5 @@ submitSignup.addEventListener("click", function () {
 
 submitLogin.addEventListener("click", function () {
   addSpinner("login-form-button");
-  showAlert();
+  setTimeout(showAlert(),2000);
 });
