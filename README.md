@@ -1,8 +1,22 @@
-# INFO_6150_NU_Job_Board
+# NU Jobs
 
-An online platform connecting job seekers and employers called NU Jobs, makes job hunting and hiring efficient and effective.
+### Team Members
 
-The following bootstrap components have been used-
+`Ruthvik Bangalore Ravi `
+
+`Neha Balaji `
+
+`Aditya Sawant`
+
+`Ameya Apte`
+
+##
+
+### Purpose
+
+An online platform named `NU Jobs` connecting job seekers and employers to make job hunting and hiring efficient and effective.
+
+The following bootstrap components have been used
 
 1. Accordion
 2. Alert
@@ -20,3 +34,5 @@ The following bootstrap components have been used-
 14. Spinner
 15. Tooltip
 16. Dropdown
+
+##
