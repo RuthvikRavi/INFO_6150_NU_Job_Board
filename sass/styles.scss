@@ -1,0 +1,14 @@
+$navbar-nav-link-padding-x: 1rem;
+$navbar-padding-y: 0.5em;
+$navbar-padding-x: 1em;
+
+$display-font-sizes: (
+  1: 8rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
