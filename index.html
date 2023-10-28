@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NU Job Board</title>
+    <title>NU Jobs</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,16 +12,467 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="sass/styles.scss" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Sample text</h1>
-    </div>
+    <link rel="stylesheet" href="css/styles.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-2 px-2">
+      <div class="container-fluid p-1">
+        <a class="navbar-brand" href="#">NU Jobs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Jobs</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li>
+              <div class="btn-group">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </button>
+                <ul class="dropdown-menu">
+                  <li
+                    class="text-center"
+                    style="padding: 10px; text-align: justify"
+                  >
+                    Resume generation
+                  </li>
+                  <li
+                    class="text-center"
+                    style="padding: 10px; text-align: justify"
+                  >
+                    CV generation
+                  </li>
+                  <li
+                    class="text-center"
+                    style="padding: 10px; text-align: justify"
+                  >
+                    Interview preparation
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <a
+              href="/pages/login.html"
+              class="btn btn-dark mx-3"
+              type="submit"
+              id="login-page-button"
+              onclick="loadLoginPage()"
+              >Log in</a
+            >
+            <a
+              href="/pages/login.html"
+              class="btn btn-outline-dark"
+              type="submit"
+              id="signup-page-button"
+              onclick="loadLoginPage()"
+              >Sign up</a
+            >
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container text-center">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+          <img
+            src="images/img_banner.jpg"
+            alt="Image"
+            class="img-fluid w-75 mx-auto d-block rounded"
+          />
+        </div>
+        <div class="col-md-6">
+          <h1 class="display-1">Find your next job!</h1>
+          <h1 class="display-5">Find and become a professional with passion</h1>
+          <a href="/pages/login.html" type="button" class="btn btn-dark btn-lg"
+            >Apply Now</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        class="d-flex flex-row flex-wrap align-items-center justify-content-between mt-5"
+      >
+        <img
+          class="client-icon"
+          src="/assets/images/android.png"
+          alt="Android"
+        />
+        <img class="client-icon" src="/assets/images/fitbit.png" alt="Fitbit" />
+        <img
+          class="client-icon"
+          src="/assets/images/flutter.png"
+          alt="Flutter"
+        />
+        <img class="client-icon" src="/assets/images/google.png" alt="Google" />
+        <img
+          class="client-icon"
+          src="/assets/images/tensorflow.png"
+          alt="TensorFlow"
+        />
+      </div>
+      <div class="content d-flex flex-row flex-wrap justify-content-center">
+        <div class="w-50">
+          <h1 class="display-3">
+            <span class="highlight">One</span> platform <br />
+            <span class="highlight">Multiple</span> opportunities
+          </h1>
+          <p>
+            Explore our platform for outstanding job opportunities with top-tier
+            clients. Your dream job is just a click away. Join us today!
+          </p>
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#createProfileCollapse"
+          >
+            Create Profile
+          </button>
+
+          <div style="min-height: 120px; margin-top: 10px">
+            <div
+              class="collapse collapse-horizontal"
+              id="createProfileCollapse"
+            >
+              <div class="card card-body" style="width: 300px">
+                Start your journey. Showcase skills, connect, and grow
+                professionally. Click "Create Profile" now. Your gateway to
+                opportunities.
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          width="40%"
+          class="img-fluid ml-5 mt-5 client-img"
+          src="./assets/images/clients.jpg"
+          alt="Clients image"
+        />
+      </div>
+    </div>
+    <h1 class="text-center display-3 my-5">
+      Hired with
+      <span class="highlight"> NU Jobs </span>
+    </h1>
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-evenly flex-wrap">
+        <div class="card my-3" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">High Job Placement Rate</h5>
+            <p class="card-text">
+              80% success in matching job seekers with their dream companies
+            </p>
+          </div>
+        </div>
+        <div class="card my-3" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Large User Base</h5>
+            <p class="card-text">
+              Millions of registered users, fostering a thriving job community
+              and expanding opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="card my-3" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Reduced Time-to-Fill for Employers</h5>
+            <p class="card-text">
+              Cut hiring time from 45 to 30 days, enhancing efficiency, and
+              minimizing costs.
+            </p>
+          </div>
+        </div>
+
+        <div class="card my-3" style="width: 18rem">
+          <div class="card-body">
+            <h5 id="cardTitle" class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p id="cardBody" class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-7"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container testimonial my-5">
+      <div id="carouselExample" class="carousel slide py-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="d-flex flex-wrap flex-row align-items-center justify-content-evenly"
+            >
+              <img
+                src="/assets/images/headshot1.jpg"
+                alt=""
+                class="rounded-circle object-fit-cover"
+              />
+              <div class="d-flex flex-column">
+                <h3 class="fw-bold">John Doe</h3>
+                <p class="fw-light">Northeastern University</p>
+                <p class="text-wrap fw-medium" style="width: 20rem">
+                  "This platform made job hunting easier. User-friendly
+                  interface, personalized recommendations, and timely
+                  notifications. Landed my dream job within weeks!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="d-flex flex-wrap flex-row align-items-center justify-content-evenly"
+            >
+              <img
+                src="/assets/images/headshot2.jpg"
+                alt=""
+                class="rounded-circle object-fit-cover"
+              />
+              <div class="d-flex flex-column">
+                <h3 class="fw-bold">James M</h3>
+                <p class="fw-light">Northeastern University</p>
+                <p class="text-wrap fw-medium" style="width: 20rem">
+                  "Impressive job listings, real-time alerts. Supportive
+                  community and insightful content. Switched industries and
+                  found my dream job."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="d-flex flex-wrap flex-row align-items-center justify-content-evenly"
+            >
+              <img
+                src="/assets/images/headshot3.jpg"
+                alt=""
+                class="rounded-circle object-fit-cover"
+              />
+              <div class="d-flex flex-column">
+                <h3 class="fw-bold">Sarah jane</h3>
+                <p class="fw-light">Northeastern University</p>
+                <p class="text-wrap fw-medium" style="width: 20rem">
+                  "Simplified my job search. Advanced search, company insights,
+                  easy application tracking. Landed a fantastic entry-level
+                  position. Highly recommend!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <h1 class="text-center display-3 my-5">FAQ</h1>
+    <div class="accordion pb-5 px-5" id="faqAccordian">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            1. How do I create an account on your job board?
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#faqAccordian"
+        >
+          <div class="accordion-body">
+            To create an account, simply click on the "Sign Up" or "Register"
+            button on the homepage. You'll be prompted to provide your email
+            address, create a password, and fill in some basic information about
+            yourself. Once you've completed these steps, your account will be
+            ready for use.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            2. Can I post job listings on your website as an employer?
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#faqAccordian"
+        >
+          <div class="accordion-body">
+            Absolutely! If you're an employer looking to post job listings, you
+            can sign up as an employer on our platform. After creating your
+            account, you'll have the option to post job openings, manage
+            applications, and connect with potential candidates. We offer
+            various pricing plans for employers, so you can choose the one that
+            best suits your needs.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            3. How can I search for jobs that match my skills and preferences?
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#faqAccordian"
+        >
+          <div class="accordion-body">
+            We've made it easy for job seekers to find the right opportunities.
+            Simply use our search feature to input keywords, job titles, or
+            locations. You can also use filters to refine your search by
+            industry, experience level, and more. Additionally, you can set up
+            job alerts to receive notifications when new positions that match
+            your criteria become available. Finding your dream job has never
+            been easier!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          NU Jobs - Terms & Conditions
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>
+          By using NU Jobs, you agree to our Terms & Conditions. You must
+          provide accurate information when creating an account. We may suspend
+          or terminate accounts for violations. Job listings and content must be
+          accurate, lawful, and respectful. We don't endorse or guarantee job
+          listings or candidates. Privacy is important; see our Privacy Policy.
+          Prohibited activities include illegal actions, harassment, or harming
+          our site. We don't provide warranties and aren't liable for damages.
+          We can terminate or suspend accounts. These terms are governed by
+          Massuchussets. If you have questions, contact us at [Contact
+          Information]. Please review these terms periodically for updates.
+        </p>
+      </div>
+    </div>
+    <footer class="container-fluid p-1">
+      <div class="row text-center mt-3">
+        <div class="col text-align-left">
+          <h4>Product</h4>
+          <p>FAQ</p>
+          <p>For Candidates</p>
+          <p>For Employers</p>
+          <p>Login</p>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <p>About Us</p>
+          <p>Careers</p>
+          <p>Services</p>
+        </div>
+        <div class="col">
+          <h4>Social</h4>
+          <p>Instagram</p>
+          <p>Twitter</p>
+          <p>Facebook</p>
+        </div>
+        <div class="col">
+          <h4>Resources</h4>
+          <p>Privacy Policy</p>
+          <button
+            class="btn"
+            style="color: white; margin-top: -10px; margin-bottom: 5px"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            T & C
+          </button>
+          <p>Contact Us</p>
+        </div>
+      </div>
+      <p class="text-center mt-2">&copy 2023 NU-Jobs All rights reserved</p>
+    </footer>
+    <script src="js/scriptIndex.js"></script>
   </body>
 </html>
