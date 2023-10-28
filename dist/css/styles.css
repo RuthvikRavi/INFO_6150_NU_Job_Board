@@ -46,6 +46,22 @@ footer {
   color: #fff;
 }
 
+.btn-rounded {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 15px 15px;
+}
+
+.form-check-label {
+  padding-bottom: 1em;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -706,6 +722,34 @@ progress {
   .display-6 {
     font-size: 2.5rem;
   }
+}
+
+.display-7 {
+  font-size: calc(1.325rem + 0.9vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-7 {
+    font-size: 2rem;
+  }
+}
+
+.display-8 {
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-8 {
+    font-size: 1.5rem;
+  }
+}
+
+.display-9 {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .list-unstyled {
