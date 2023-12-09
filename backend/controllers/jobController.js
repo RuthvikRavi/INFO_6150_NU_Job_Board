@@ -15,7 +15,7 @@ export const createJob = async (req,res) => {
     }
     catch(err){
         // Return error in case of failures
-        res.status(500).json({success:false, message:'Failed to create'});
+        res.status(500).json({success:false, message:'Failed to create. Title already exists'});
     }
 };
 
@@ -36,7 +36,7 @@ export const updateJob = async (req,res) => {
     }
     catch(err){
         // Return error in case of failures
-        res.status(500).json({success:false, message:'Failed to update'});
+        res.status(500).json({success:false, message:'Failed to update. Title already exists'});
     }
 };
 

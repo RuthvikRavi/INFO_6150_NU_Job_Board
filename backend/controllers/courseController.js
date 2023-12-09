@@ -15,7 +15,7 @@ export const createCourse = async (req,res) => {
     }
     catch(err){
         // Return error in case of any failures
-        res.status(500).json({success:false, message:'Failed to create'});
+        res.status(500).json({success:false, message:'Failed to create. Title name already exists'});
     }
 };
 
@@ -36,7 +36,7 @@ export const updateCourse = async (req,res) => {
     }
     catch(err){
         // Return error in case of any failures
-        res.status(500).json({success:false, message:'Failed to update'});
+        res.status(500).json({success:false, message:'Failed to update. Title name already exists'});
     }
 };
 

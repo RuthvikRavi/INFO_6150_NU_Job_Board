@@ -168,7 +168,7 @@ const JobCard = ({ job }) => {
             >
                 <div style={{zIndex:"1"}}>
                 {/* Content of your modal goes here */}
-                <h3 style={{color:"black"}}>Add new job</h3>
+                <h3 style={{color:"black"}}>Update job</h3>
 
                 <Form onSubmit={handleClick}>
                 <div>

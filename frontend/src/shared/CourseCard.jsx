@@ -228,7 +228,7 @@ const handleDeleteClick = async e =>{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            zIndex:"10"
+            zIndex:"0"
           },
           content: {
             width: '80%', // Default width
@@ -238,8 +238,7 @@ const handleDeleteClick = async e =>{
           },
         }}
       >
-        <div style={{zIndex:"1"}}>
-          {/* Content of your modal goes here */}
+        <div style={{zIndex:"0"}}>
           <h2>{title} {featured && <i className="ri-star-fill"></i>}</h2>
           <br></br>
           <h4>Description</h4>
@@ -291,6 +290,7 @@ const handleDeleteClick = async e =>{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    
                 },
                 content: {
                     width: '80%', // Default width
@@ -298,11 +298,12 @@ const handleDeleteClick = async e =>{
                     overflow: 'auto',
                     padding: '5%'
                 },
+                zIndex:"1",
                 }}
             >
-                <div style={{zIndex:"1"}}>
+                <div style={{zIndex:"10"}}>
                 {/* Content of your modal goes here */}
-                <h3 style={{color:"black"}}>Add new course</h3>
+                <h3 style={{color:"black"}}>Update course</h3>
 
                 <Form onSubmit={handleClick}>
                 <div>

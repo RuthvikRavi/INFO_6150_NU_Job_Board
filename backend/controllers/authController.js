@@ -25,7 +25,7 @@ export const register = async(req,res) => {
         res.status(200).json({success:true, message:'Successfully created'});
     }catch(err) {
         // Return error in case of any failures
-        res.status(500).json({success:true, message:'Failed to create. Try again'});
+        res.status(500).json({success:true, message:'Failed to create. Email already exists'});
     }
 };
 
