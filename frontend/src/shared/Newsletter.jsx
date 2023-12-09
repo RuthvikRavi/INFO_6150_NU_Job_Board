@@ -13,6 +13,8 @@ const Newsletter = () => {
 
     const emailData = {
       "to":receiverEmail,
+      "subject":'Welcome to NU Jobs Newsletter!',
+      "text":'Stay updated through weekly news regarding the jobs around!!!',
     };
 
     try {
