@@ -1,0 +1,71 @@
+/* footer.css */
+/* .client-icon {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+}
+
+.content {
+  margin-top: 50px;
+  align-items: center;
+}
+
+.content h1 span {
+  background: linear-gradient(#48a9fe, #0beef9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.object-fit-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+h1 span {
+  background: linear-gradient(#48a9fe, #0beef9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.testimonial {
+  background: linear-gradient(#274060, #1b2845);
+  color: #fff;
+} */
+footer {
+  background: linear-gradient(#274060, #1b2845);
+  color: #fff;
+}
+footer h4 {
+  color: #fff;
+}
+footer p {
+  color: #fff;
+}
+
+/* 
+p {
+  color: #fff !important;
+} */
+/* .accordion-header button:hover {
+  background-color: #274060;
+  color: #fff;
+}
+
+.btn-rounded {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid hsl(0, 0%, 87%);
+  border-radius: 0 0 15px 15px;
+}
+
+.form-check-label {
+  padding-bottom: 1em;
+} *//*# sourceMappingURL=Footer.css.map */
