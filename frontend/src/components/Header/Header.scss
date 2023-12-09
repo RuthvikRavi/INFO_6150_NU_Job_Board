@@ -1,0 +1,91 @@
+// Home.scss
+
+// Bootstrap Variables
+$navbar-nav-link-padding-x: 1rem;
+$navbar-padding-y: 0.5em;
+$navbar-padding-x: 1em;
+
+$display-font-sizes: (
+  1: 8rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+  7: 2rem,
+  8: 1.5rem,
+  9: 1rem,
+);
+
+$spacer: 2rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  10: $spacer * 10,
+);
+
+// Custom Styles
+.client-icon {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+}
+
+.content {
+  margin-top: 50px;
+  align-items: center;
+  h1 span {
+    background: linear-gradient(#48a9fe, #0beef9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.object-fit-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.testimonial {
+  background: linear-gradient(#274060, #1b2845);
+  color: #fff;
+}
+
+.footer {
+  background: linear-gradient(#274060, #1b2845);
+  color: #fff;
+}
+
+.accordion-header {
+  button:hover {
+    background-color: #274060;
+    color: #fff;
+  }
+}
+
+.btn-rounded {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 15px 15px;
+}
+
+.form-check-label {
+  padding-bottom: 1em;
+}
+
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
