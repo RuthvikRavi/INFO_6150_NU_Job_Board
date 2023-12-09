@@ -94,12 +94,12 @@ searchHandler();
 
 const [receiverEmail,setReceiverEmail] = useState('');  
   
-    const sendEmail = async () => {
+    const sendEmail = async (id) => {
         const url = `${BASE_URL}/sendEmail`;
 
         const emailData = {
         "to": booking.userEmail,
-        "subject":"Thanks for Purchasing Course Id" + course._id ,
+        "subject":"Thanks for Purchasing Course, Subscription Id - " + id ,
         "text":'You have successfully purchased the ' + booking.courseName,
         };
 
@@ -143,9 +143,9 @@ const handleClick = async e =>{
       if(!res.ok){
           return alert(result.message);
       }
-      // else{
-      //   sendEmail();
-      // }
+      else{
+        sendEmail(result.data._id);
+      }
       window.location.reload();
 
   } catch (err) {

@@ -47,12 +47,12 @@ const Booking = ({ job }) => {
 
     const [receiverEmail,setReceiverEmail] = useState('');  
   
-    const sendEmail = async () => {
+    const sendEmail = async (id) => {
         const url = `${BASE_URL}/sendEmail`;
 
         const emailData = {
         "to": booking.userEmail,
-        "subject":"Thanks for Applying to Job Id" + job._id ,
+        "subject":"Thanks for Applying to Job, Application Id - " + id ,
         "text":'You have successfully applied to ' + booking.jobName,
         };
 
@@ -130,7 +130,7 @@ const Booking = ({ job }) => {
             if(!res.ok){
                 return alert(result.message);
             }else{
-                sendEmail();
+                sendEmail(result.data._id);
             }
     
             window.location.reload();
