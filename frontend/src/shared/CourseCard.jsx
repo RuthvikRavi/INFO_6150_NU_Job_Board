@@ -374,7 +374,7 @@ const handleDeleteClick = async e =>{
             stripeKey='pk_test_51OI01MDYkCfoF8bhQR7QWuekJQRtS2Kh8B64EJUaEG4itlIPtbvgRwAD5FL8CbPtRay5IvBe4YeAoeItVpm8ITbb00zwCRoFgv'
             amount={price * 100} // amount in cents
             currency='USD'
-            name='Tour Booking'
+            name='Course Booking'
             billingAddress
             shippingAddress
             disabled={responseReceived}
