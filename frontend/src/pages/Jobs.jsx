@@ -1,16 +1,15 @@
 import React, {useState, useEffect} from 'react'
+import { Container, Row, Col } from 'reactstrap';
+
 import CommonSection from '../shared/CommonSection';
-
-import "../styles/job.css";
-
 import JobCard from './../shared/JobCard';
 import SearchBar from './../shared/SearchBar';
 import Newsletter from './../shared/Newsletter';
-import { Container, Row, Col } from 'reactstrap';
+
+import "../styles/job.css";
 
 import useFetch from '../hooks/useFetch';
 import { BASE_URL } from '../utils/config';
-
 
 const Jobs = () => {
   const [pageCount, setPageCount] = useState(0);
@@ -20,16 +19,11 @@ const Jobs = () => {
   const {data:jobCount} = useFetch(`${BASE_URL}/jobs/search/getJobCount`)
 
   useEffect(() =>{
-    const pages = Math.ceil(jobCount  / 8);
-    setPageCount(pages);
-    window.scrollTo(0,0)
-
-
-  }, [page, jobCount, jobs]
+      const pages = Math.ceil(jobCount  / 8);
+      setPageCount(pages);
+      window.scrollTo(0,0)
+    }, [page, jobCount, jobs]
   );
-
-
-  // console.log(jobs);
   
   return (
     <>

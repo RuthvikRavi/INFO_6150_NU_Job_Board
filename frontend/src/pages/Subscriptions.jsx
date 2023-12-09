@@ -1,36 +1,36 @@
 import React, {useState, useEffect} from 'react'
-import Modal from 'react-modal';
+import CommonSection from '../shared/CommonSection';
+
+import SubscriptionCard from '../shared/SubscriptionCard';
+import SearchSubscriptionBar from '../shared/SearchSubscriptionBar';
+import Newsletter from '../shared/Newsletter';
 import { Container, Row, Col } from 'reactstrap';
 
-import CommonSection from '../shared/CommonSection';
-import ApplicationCard from '../shared/ApplicationCard';
-import SearchApplicationBar from '../shared/SearchApplicationBar';
-import Newsletter from '../shared/Newsletter';
-
 import useFetch from '../hooks/useFetch';
-
 import { BASE_URL } from '../utils/config';
 
-const Applications = () => {
+import Modal from 'react-modal';
 
+const Subscriptions = () => {
   const [pageCount, setPageCount] = useState(0);
   const[page, setPage] = useState(0);
-  const {data:applications, loading, error} = useFetch(`${BASE_URL}/application?page=${page}`)
+  const {data:subscriptions, loading, error} = useFetch(`${BASE_URL}/subscription?page=${page}`)
 
-  const {data:applicationCount} = useFetch(`${BASE_URL}/application/search/getApplicationCount`)
+  const {data:subscriptionCount} = useFetch(`${BASE_URL}/subscription/search/getSubscriptionCount`)
 
   useEffect(() =>{
-      const pages = Math.ceil(applicationCount  / 8);
-      setPageCount(pages);
-      window.scrollTo(0,0)
+    const pages = Math.ceil(subscriptionCount  / 8);
+    setPageCount(pages);
+    window.scrollTo(0,0)
 
-    }, [page, applicationCount, applications]
+
+  }, [page, subscriptionCount, subscriptions]
   );
 
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const handleOpenModal = (application) => {
-    renderModal(application);
+  const handleOpenModal = (subscription) => {
+    renderModal(subscription);
     setModalOpen(true);
   };
 
@@ -38,7 +38,7 @@ const Applications = () => {
     setModalOpen(false);
   };
 
-  const renderModal = (application) => {
+  const renderModal = (subscription) => {
       return (
         <Modal
                     isOpen={isModalOpen}
@@ -60,15 +60,15 @@ const Applications = () => {
                   >
                     <div style={{zIndex:"1"}}>
                       {/* Content of your modal goes here */}
-                      <h2>Receipt No: {application._id}</h2>
+                      <h2>Receipt No: {subscription._id}</h2>
                       <br></br>
-                      <p>Subscriber Name: {application.fullName}</p>
-                      <p>Subscriber Email: {application.userEmail}</p>
-                      <p>Subscriber UserID: {application.userId}</p>
+                      <p>Subscriber Name: {subscription.fullName}</p>
+                      <p>Subscriber Email: {subscription.userEmail}</p>
+                      <p>Subscriber UserID: {subscription.userId}</p>
                       <br></br>
-                      <p>Course Name: {application.courseName}</p>
-                      <p>Amount Paid: {application.amountPaid}</p>
-                      <p>Bought on: {application.createdAt}</p>
+                      <p>Course Name: {subscription.courseName}</p>
+                      <p>Amount Paid: {subscription.amountPaid}</p>
+                      <p>Bought on: {subscription.createdAt}</p>
                       <br></br>
                       <br></br>
                       <button className="btn booking__btn" onClick={handleCloseModal}>Close</button>
@@ -79,11 +79,11 @@ const Applications = () => {
   
   return (
     <>
-      <CommonSection title = {"All Applications"}/> 
+      <CommonSection title = {"All Subscriptions"}/> 
       <section>
         <Container>
           <Row>
-            <SearchApplicationBar />
+            <SearchSubscriptionBar />
           </Row>
         </Container>
       </section>
@@ -96,12 +96,12 @@ const Applications = () => {
          {
           !loading && !error &&  <Row>
           {
-            applications?.map(application=> (
-            <Col lg='3' md='6' sm='6' className = "mb-4" key ={application._id} >
-                <ApplicationCard application = {application}/>
+            subscriptions?.map(subscription=> (
+            <Col lg='3' md='6' sm='6' className = "mb-4" key ={subscription._id} >
+                <SubscriptionCard subscription = {subscription}/>
                 {/* <div>
                   <p className="course__title" style={{fontSize:"150%", textAlign:"center"}} onClick={handleOpenModal}>
-                    Receipt No <br></br> <b>{application._id}</b>
+                    Receipt No <br></br> <b>{subscription._id}</b>
                   </p> */}
                   {/* <Modal
                     isOpen={isModalOpen}
@@ -123,15 +123,15 @@ const Applications = () => {
                   >
                     <div style={{zIndex:"1"}}>
                       
-                      <h2>Receipt No: {application._id}</h2>
+                      <h2>Receipt No: {subscription._id}</h2>
                       <br></br>
-                      <p>Subscriber Name: {application.fullName}</p>
-                      <p>Subscriber Email: {application.userEmail}</p>
-                      <p>Subscriber UserID: {application.userId}</p>
+                      <p>Subscriber Name: {subscription.fullName}</p>
+                      <p>Subscriber Email: {subscription.userEmail}</p>
+                      <p>Subscriber UserID: {subscription.userId}</p>
                       <br></br>
-                      <p>Course Name: {application.courseName}</p>
-                      <p>Amount Paid: {application.amountPaid}</p>
-                      <p>Bought on: {application.createdAt}</p>
+                      <p>Course Name: {subscription.courseName}</p>
+                      <p>Amount Paid: {subscription.amountPaid}</p>
+                      <p>Bought on: {subscription.createdAt}</p>
                       <br></br>
                       <br></br>
                       <button className="btn booking__btn" onClick={handleCloseModal}>Close</button>
@@ -164,5 +164,5 @@ const Applications = () => {
   );
 };
 
-export default Applications
+export default Subscriptions
 
